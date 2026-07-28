@@ -6,129 +6,130 @@
 <meta name="robots" content="noindex">
 <title>Commande — CAPSULE (démonstration)</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/theme.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>:root{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300..600;1,300..600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
-<body class="bg-white antialiased">
+<body class="bg-[#FAF9F7] font-sans antialiased">
 
 <!-- Bandeau démonstration -->
-<div class="bg-[#1a1a1a] px-6 py-3 text-center">
+<div class="bg-[#111] px-6 py-3 text-center">
   <p class="text-[11px] font-light uppercase tracking-[0.15em] text-white">
     Maquette de démonstration — aucun paiement réel, ne saisissez pas de vraies données
   </p>
 </div>
 
-<div class="min-h-screen bg-white lg:grid lg:grid-cols-12">
+<div class="min-h-screen bg-[#FAF9F7] lg:grid lg:grid-cols-12">
 
-  <main class="px-6 py-10 md:px-12 lg:col-span-7 lg:border-r lg:border-[#1a1a1a]/10 lg:px-16 lg:py-14 xl:px-24">
+  <main class="px-6 py-10 md:px-12 lg:col-span-7 lg:border-r lg:border-[#111]/10 lg:px-16 lg:py-14 xl:px-24">
 
-    <a href="index.html" class="block text-lg font-light tracking-[0.3em] text-[#1a1a1a]">CAPSULE</a>
+    <a href="index.html" class="block text-lg font-light tracking-[0.3em] text-[#111]">CAPSULE</a>
 
     <nav class="mt-8 flex flex-wrap items-center gap-2 text-[11px] font-light uppercase tracking-[0.15em]">
-      <span class="text-[#1a1a1a]">Information</span><span class="text-[#1a1a1a]/25">—</span>
-      <span class="text-[#1a1a1a]/35">Livraison</span><span class="text-[#1a1a1a]/25">—</span>
-      <span class="text-[#1a1a1a]/35">Paiement</span>
+      <span class="text-[#111]">Information</span><span class="text-[#111]/25">—</span>
+      <span class="text-[#111]/35">Livraison</span><span class="text-[#111]/25">—</span>
+      <span class="text-[#111]/35">Paiement</span>
     </nav>
 
-    <details class="group mt-8 border-y border-[#1a1a1a]/10 lg:hidden">
+    <details class="group mt-8 border-y border-[#111]/10 lg:hidden">
       <summary class="flex cursor-pointer list-none items-center justify-between py-4">
-        <span class="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Récapitulatif
+        <span class="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Récapitulatif
           <svg class="h-3.5 w-3.5 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="square" d="m6 9 6 6 6-6"/></svg>
         </span>
-        <span class="text-base font-light text-[#1a1a1a]">570 €</span>
+        <span class="text-base font-light text-[#111]">570 €</span>
       </summary>
       <div class="space-y-4 pb-6">
-        <div class="flex items-center gap-4"><img src="https://placehold.co/200x250/f4f2ef/1a1a1a?text=01" alt="Chemise Lin Écru" class="h-16 w-[52px] object-cover"><div class="flex-1"><p class="text-xs font-normal tracking-wide text-[#1a1a1a]">Chemise Lin Écru</p><p class="mt-0.5 text-[11px] font-light text-[#1a1a1a]/50">Taille M — Qté 1</p></div><p class="text-xs font-light text-[#1a1a1a]">180 €</p></div>
-        <div class="flex items-center gap-4"><img src="https://placehold.co/200x250/dedad3/1a1a1a?text=03" alt="Veste Structurée" class="h-16 w-[52px] object-cover"><div class="flex-1"><p class="text-xs font-normal tracking-wide text-[#1a1a1a]">Veste Structurée</p><p class="mt-0.5 text-[11px] font-light text-[#1a1a1a]/50">Taille S — Qté 1</p></div><p class="text-xs font-light text-[#1a1a1a]">390 €</p></div>
+        <div class="flex items-center gap-4"><img src="assets/img/p01-chemise.svg" alt="Chemise Lin Écru" class="h-16 w-[52px] object-cover"><div class="flex-1"><p class="text-xs font-normal tracking-wide text-[#111]">Chemise Lin Écru</p><p class="mt-0.5 text-[11px] font-light text-[#111]/50">Taille M — Qté 1</p></div><p class="text-xs font-light text-[#111]">180 €</p></div>
+        <div class="flex items-center gap-4"><img src="assets/img/p03-veste.svg" alt="Veste Structurée" class="h-16 w-[52px] object-cover"><div class="flex-1"><p class="text-xs font-normal tracking-wide text-[#111]">Veste Structurée</p><p class="mt-0.5 text-[11px] font-light text-[#111]/50">Taille S — Qté 1</p></div><p class="text-xs font-light text-[#111]">390 €</p></div>
       </div>
     </details>
 
     <section class="mt-10">
       <div class="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
-        <button type="button" class="flex items-center justify-center border border-[#1a1a1a]/15 bg-[#1a1a1a] py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-85">Apple&nbsp;Pay</button>
-        <button type="button" class="flex items-center justify-center border border-[#1a1a1a]/15 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] transition-colors hover:border-[#1a1a1a]">Google&nbsp;Pay</button>
-        <button type="button" class="flex items-center justify-center border border-[#1a1a1a]/15 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] transition-colors hover:border-[#1a1a1a]">PayPal</button>
+        <button type="button" class="flex items-center justify-center border border-[#111]/15 bg-[#111] py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-85">Apple&nbsp;Pay</button>
+        <button type="button" class="flex items-center justify-center border border-[#111]/15 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111] transition-colors hover:border-[#111]">Google&nbsp;Pay</button>
+        <button type="button" class="flex items-center justify-center border border-[#111]/15 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111] transition-colors hover:border-[#111]">PayPal</button>
       </div>
-      <div class="my-8 flex items-center gap-4"><span class="h-px flex-1 bg-[#1a1a1a]/10"></span><span class="text-[11px] font-light uppercase tracking-[0.2em] text-[#1a1a1a]/35">ou</span><span class="h-px flex-1 bg-[#1a1a1a]/10"></span></div>
+      <div class="my-8 flex items-center gap-4"><span class="h-px flex-1 bg-[#111]/10"></span><span class="text-[11px] font-light uppercase tracking-[0.2em] text-[#111]/35">ou</span><span class="h-px flex-1 bg-[#111]/10"></span></div>
     </section>
 
     <form class="space-y-12" data-checkout autocomplete="off">
 
       <section>
         <div class="mb-5 flex items-baseline justify-between">
-          <h2 class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Contact</h2>
-          <a href="#" class="text-[11px] font-light text-[#1a1a1a]/40 underline underline-offset-4 transition-colors hover:text-[#1a1a1a]">Se connecter</a>
+          <h2 class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Contact</h2>
+          <a href="#" class="text-[11px] font-light text-[#111]/40 underline underline-offset-4 transition-colors hover:text-[#111]">Se connecter</a>
         </div>
         <label for="email" class="sr-only">Adresse e-mail</label>
-        <input id="email" type="email" placeholder="Adresse e-mail" class="w-full border border-[#1a1a1a]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35 focus:border-[#1a1a1a] focus:outline-none">
+        <input id="email" type="email" placeholder="Adresse e-mail" class="w-full border border-[#111]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35 focus:border-[#111] focus:outline-none">
       </section>
 
       <section>
-        <h2 class="mb-5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Adresse de livraison</h2>
+        <h2 class="mb-5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Adresse de livraison</h2>
         <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <select class="col-span-full appearance-none border border-[#1a1a1a]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] focus:border-[#1a1a1a] focus:outline-none" aria-label="Pays">
+          <select class="col-span-full appearance-none border border-[#111]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#111] focus:border-[#111] focus:outline-none" aria-label="Pays">
             <option>France</option><option>Belgique</option><option>Suisse</option><option>Luxembourg</option>
           </select>
-          <input type="text" placeholder="Prénom" aria-label="Prénom" class="border border-[#1a1a1a]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35 focus:border-[#1a1a1a] focus:outline-none">
-          <input type="text" placeholder="Nom" aria-label="Nom" class="border border-[#1a1a1a]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35 focus:border-[#1a1a1a] focus:outline-none">
-          <input type="text" placeholder="Adresse" aria-label="Adresse" class="col-span-full border border-[#1a1a1a]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35 focus:border-[#1a1a1a] focus:outline-none">
-          <input type="text" placeholder="Appartement, étage, code (optionnel)" aria-label="Complément d'adresse" class="col-span-full border border-[#1a1a1a]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35 focus:border-[#1a1a1a] focus:outline-none">
-          <input type="text" inputmode="numeric" placeholder="Code postal" aria-label="Code postal" class="border border-[#1a1a1a]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35 focus:border-[#1a1a1a] focus:outline-none">
-          <input type="text" placeholder="Ville" aria-label="Ville" class="border border-[#1a1a1a]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35 focus:border-[#1a1a1a] focus:outline-none">
+          <input type="text" placeholder="Prénom" aria-label="Prénom" class="border border-[#111]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35 focus:border-[#111] focus:outline-none">
+          <input type="text" placeholder="Nom" aria-label="Nom" class="border border-[#111]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35 focus:border-[#111] focus:outline-none">
+          <input type="text" placeholder="Adresse" aria-label="Adresse" class="col-span-full border border-[#111]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35 focus:border-[#111] focus:outline-none">
+          <input type="text" placeholder="Appartement, étage, code (optionnel)" aria-label="Complément d'adresse" class="col-span-full border border-[#111]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35 focus:border-[#111] focus:outline-none">
+          <input type="text" inputmode="numeric" placeholder="Code postal" aria-label="Code postal" class="border border-[#111]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35 focus:border-[#111] focus:outline-none">
+          <input type="text" placeholder="Ville" aria-label="Ville" class="border border-[#111]/20 bg-transparent px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35 focus:border-[#111] focus:outline-none">
         </div>
       </section>
 
       <section>
-        <h2 class="mb-5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Mode de livraison</h2>
-        <fieldset class="divide-y divide-[#1a1a1a]/10 border border-[#1a1a1a]/20">
+        <h2 class="mb-5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Mode de livraison</h2>
+        <fieldset class="divide-y divide-[#111]/10 border border-[#111]/20">
           <legend class="sr-only">Choisir un mode de livraison</legend>
           <label class="flex cursor-pointer items-center gap-4 px-4 py-4">
             <input type="radio" name="shipping" checked class="peer sr-only">
-            <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#1a1a1a]/30 transition-colors peer-checked:border-[#1a1a1a]"><span class="h-2 w-2 rounded-full bg-[#1a1a1a] opacity-0 transition-opacity peer-checked:opacity-100"></span></span>
-            <span class="flex-1"><span class="block text-sm font-light text-[#1a1a1a]">Standard — 3 à 5 jours</span><span class="mt-0.5 block text-[11px] font-light text-[#1a1a1a]/45">Colissimo suivi</span></span>
-            <span class="text-sm font-light text-[#1a1a1a]">Offerte</span>
+            <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#111]/30 transition-colors peer-checked:border-[#111]"><span class="h-2 w-2 rounded-full bg-[#111] opacity-0 transition-opacity peer-checked:opacity-100"></span></span>
+            <span class="flex-1"><span class="block text-sm font-light text-[#111]">Standard — 3 à 5 jours</span><span class="mt-0.5 block text-[11px] font-light text-[#111]/45">Colissimo suivi</span></span>
+            <span class="text-sm font-light text-[#111]">Offerte</span>
           </label>
           <label class="flex cursor-pointer items-center gap-4 px-4 py-4">
             <input type="radio" name="shipping" class="peer sr-only">
-            <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#1a1a1a]/30 transition-colors peer-checked:border-[#1a1a1a]"><span class="h-2 w-2 rounded-full bg-[#1a1a1a] opacity-0 transition-opacity peer-checked:opacity-100"></span></span>
-            <span class="flex-1"><span class="block text-sm font-light text-[#1a1a1a]">Express — 24 h</span><span class="mt-0.5 block text-[11px] font-light text-[#1a1a1a]/45">Commande avant 14 h</span></span>
-            <span class="text-sm font-light text-[#1a1a1a]">12 €</span>
+            <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#111]/30 transition-colors peer-checked:border-[#111]"><span class="h-2 w-2 rounded-full bg-[#111] opacity-0 transition-opacity peer-checked:opacity-100"></span></span>
+            <span class="flex-1"><span class="block text-sm font-light text-[#111]">Express — 24 h</span><span class="mt-0.5 block text-[11px] font-light text-[#111]/45">Commande avant 14 h</span></span>
+            <span class="text-sm font-light text-[#111]">12 €</span>
           </label>
           <label class="flex cursor-pointer items-center gap-4 px-4 py-4">
             <input type="radio" name="shipping" class="peer sr-only">
-            <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#1a1a1a]/30 transition-colors peer-checked:border-[#1a1a1a]"><span class="h-2 w-2 rounded-full bg-[#1a1a1a] opacity-0 transition-opacity peer-checked:opacity-100"></span></span>
-            <span class="flex-1"><span class="block text-sm font-light text-[#1a1a1a]">Retrait en boutique</span><span class="mt-0.5 block text-[11px] font-light text-[#1a1a1a]/45">Paris 3ᵉ — sous 2 h</span></span>
-            <span class="text-sm font-light text-[#1a1a1a]">Offert</span>
+            <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#111]/30 transition-colors peer-checked:border-[#111]"><span class="h-2 w-2 rounded-full bg-[#111] opacity-0 transition-opacity peer-checked:opacity-100"></span></span>
+            <span class="flex-1"><span class="block text-sm font-light text-[#111]">Retrait en boutique</span><span class="mt-0.5 block text-[11px] font-light text-[#111]/45">Paris 3ᵉ — sous 2 h</span></span>
+            <span class="text-sm font-light text-[#111]">Offert</span>
           </label>
         </fieldset>
       </section>
 
       <section>
-        <h2 class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Paiement</h2>
-        <p class="mt-2 text-[11px] font-light text-[#1a1a1a]/45">Champs désactivés — cette maquette ne traite aucun paiement.</p>
+        <h2 class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Paiement</h2>
+        <p class="mt-2 text-[11px] font-light text-[#111]/45">Champs désactivés — cette maquette ne traite aucun paiement.</p>
 
-        <div class="mt-5 border border-[#1a1a1a]/20 opacity-60">
-          <div class="flex items-center justify-between border-b border-[#1a1a1a]/10 px-4 py-4">
-            <span class="text-sm font-light text-[#1a1a1a]">Carte bancaire</span>
+        <div class="mt-5 border border-[#111]/20 opacity-60">
+          <div class="flex items-center justify-between border-b border-[#111]/10 px-4 py-4">
+            <span class="text-sm font-light text-[#111]">Carte bancaire</span>
             <div class="flex gap-1.5 opacity-40">
-              <img src="https://placehold.co/34x22/ffffff/1a1a1a?text=VISA" alt="Visa" class="h-[22px]">
-              <img src="https://placehold.co/34x22/ffffff/1a1a1a?text=MC" alt="Mastercard" class="h-[22px]">
+              <img src="assets/img/p01-chemise.svgVISA" alt="Visa" class="h-[22px]">
+              <img src="assets/img/p01-chemise.svgMC" alt="Mastercard" class="h-[22px]">
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-px bg-[#1a1a1a]/10">
-            <input type="text" disabled placeholder="Numéro de carte" aria-label="Numéro de carte" class="col-span-full bg-white px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35">
-            <input type="text" disabled placeholder="MM / AA" aria-label="Expiration" class="bg-white px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35">
-            <input type="text" disabled placeholder="CVC" aria-label="Cryptogramme" class="bg-white px-4 py-3.5 text-sm font-light tracking-wide text-[#1a1a1a] placeholder:text-[#1a1a1a]/35">
+          <div class="grid grid-cols-2 gap-px bg-[#111]/10">
+            <input type="text" disabled placeholder="Numéro de carte" aria-label="Numéro de carte" class="col-span-full bg-white px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35">
+            <input type="text" disabled placeholder="MM / AA" aria-label="Expiration" class="bg-white px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35">
+            <input type="text" disabled placeholder="CVC" aria-label="Cryptogramme" class="bg-white px-4 py-3.5 text-sm font-light tracking-wide text-[#111] placeholder:text-[#111]/35">
           </div>
         </div>
       </section>
 
-      <section class="border-t border-[#1a1a1a]/10 pt-8">
-        <button type="submit" class="w-full bg-[#1a1a1a] px-8 py-4 text-[11px] font-medium uppercase tracking-[0.25em] text-white transition-colors duration-300 hover:bg-[#333]">Simuler la commande — 570 €</button>
-        <p class="mt-4 text-center text-[11px] font-light leading-relaxed text-[#1a1a1a]/40">Aucune donnée n'est transmise. Redirection vers la page de confirmation.</p>
-        <a href="panier.html" class="mt-6 flex items-center justify-center gap-2 text-[11px] font-light uppercase tracking-[0.15em] text-[#1a1a1a]/40 transition-colors hover:text-[#1a1a1a]">
+      <section class="border-t border-[#111]/10 pt-8">
+        <button type="submit" class="w-full bg-[#111] px-8 py-4 text-[11px] font-medium uppercase tracking-[0.25em] text-white transition-colors duration-300 hover:bg-[#C7513A]">Simuler la commande — 570 €</button>
+        <p class="mt-4 text-center text-[11px] font-light leading-relaxed text-[#111]/40">Aucune donnée n'est transmise. Redirection vers la page de confirmation.</p>
+        <a href="panier.html" class="mt-6 flex items-center justify-center gap-2 text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/40 transition-colors hover:text-[#111]">
           <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="square" d="M15 19l-7-7 7-7"/></svg>Retour au panier
         </a>
       </section>
@@ -138,28 +139,28 @@
   <aside class="hidden bg-[#faf9f7] px-16 py-14 lg:col-span-5 lg:block xl:px-20">
     <div class="sticky top-14">
       <h2 class="sr-only">Récapitulatif de commande</h2>
-      <ul class="space-y-6 border-b border-[#1a1a1a]/10 pb-8">
+      <ul class="space-y-6 border-b border-[#111]/10 pb-8">
         <li class="flex items-center gap-4">
-          <div class="relative shrink-0"><img src="https://placehold.co/200x250/f4f2ef/1a1a1a?text=01" alt="Chemise Lin Écru" class="h-20 w-16 object-cover"><span class="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#1a1a1a] px-1 text-[10px] font-medium text-white">1</span></div>
-          <div class="flex-1"><p class="text-sm font-normal tracking-wide text-[#1a1a1a]">Chemise Lin Écru</p><p class="mt-1 text-[11px] font-light text-[#1a1a1a]/50">Écru — Taille M</p></div>
-          <p class="text-sm font-light text-[#1a1a1a]">180 €</p>
+          <div class="relative shrink-0"><img src="assets/img/p01-chemise.svg" alt="Chemise Lin Écru" class="h-20 w-16 object-cover"><span class="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#111] px-1 text-[10px] font-medium text-white">1</span></div>
+          <div class="flex-1"><p class="text-sm font-normal tracking-wide text-[#111]">Chemise Lin Écru</p><p class="mt-1 text-[11px] font-light text-[#111]/50">Écru — Taille M</p></div>
+          <p class="text-sm font-light text-[#111]">180 €</p>
         </li>
         <li class="flex items-center gap-4">
-          <div class="relative shrink-0"><img src="https://placehold.co/200x250/dedad3/1a1a1a?text=03" alt="Veste Structurée" class="h-20 w-16 object-cover"><span class="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#1a1a1a] px-1 text-[10px] font-medium text-white">1</span></div>
-          <div class="flex-1"><p class="text-sm font-normal tracking-wide text-[#1a1a1a]">Veste Structurée</p><p class="mt-1 text-[11px] font-light text-[#1a1a1a]/50">Sable — Taille S</p></div>
-          <p class="text-sm font-light text-[#1a1a1a]">390 €</p>
+          <div class="relative shrink-0"><img src="assets/img/p03-veste.svg" alt="Veste Structurée" class="h-20 w-16 object-cover"><span class="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#111] px-1 text-[10px] font-medium text-white">1</span></div>
+          <div class="flex-1"><p class="text-sm font-normal tracking-wide text-[#111]">Veste Structurée</p><p class="mt-1 text-[11px] font-light text-[#111]/50">Sable — Taille S</p></div>
+          <p class="text-sm font-light text-[#111]">390 €</p>
         </li>
       </ul>
-      <dl class="space-y-3.5 border-b border-[#1a1a1a]/10 py-8">
-        <div class="flex justify-between"><dt class="text-sm font-light text-[#1a1a1a]/60">Sous-total</dt><dd class="text-sm font-light text-[#1a1a1a]">570 €</dd></div>
-        <div class="flex justify-between"><dt class="text-sm font-light text-[#1a1a1a]/60">Livraison</dt><dd class="text-sm font-light text-[#1a1a1a]">Offerte</dd></div>
-        <div class="flex justify-between"><dt class="text-sm font-light text-[#1a1a1a]/60">TVA incluse</dt><dd class="text-sm font-light text-[#1a1a1a]/60">95 €</dd></div>
+      <dl class="space-y-3.5 border-b border-[#111]/10 py-8">
+        <div class="flex justify-between"><dt class="text-sm font-light text-[#111]/60">Sous-total</dt><dd class="text-sm font-light text-[#111]">570 €</dd></div>
+        <div class="flex justify-between"><dt class="text-sm font-light text-[#111]/60">Livraison</dt><dd class="text-sm font-light text-[#111]">Offerte</dd></div>
+        <div class="flex justify-between"><dt class="text-sm font-light text-[#111]/60">TVA incluse</dt><dd class="text-sm font-light text-[#111]/60">95 €</dd></div>
       </dl>
       <div class="flex items-baseline justify-between pt-8">
-        <span class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Total</span>
-        <span class="text-2xl font-light text-[#1a1a1a]">570 €</span>
+        <span class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Total</span>
+        <span class="text-2xl font-light text-[#111]">570 €</span>
       </div>
-      <p class="mt-8 border-t border-[#1a1a1a]/10 pt-6 text-[11px] font-light leading-relaxed text-[#1a1a1a]/40">Emballage soigné, papier de soie recyclé. Retours gratuits sous 30 jours.</p>
+      <p class="mt-8 border-t border-[#111]/10 pt-6 text-[11px] font-light leading-relaxed text-[#111]/40">Emballage soigné, papier de soie recyclé. Retours gratuits sous 30 jours.</p>
     </div>
   </aside>
 </div>

@@ -6,87 +6,88 @@
 <title>Collection — CAPSULE</title>
 <meta name="description" content="Collection capsule automne : six pièces, filtres par catégorie, taille, couleur et prix.">
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/theme.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>:root{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300..600;1,300..600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
-<body class="bg-white antialiased">
+<body class="bg-[#FAF9F7] font-sans antialiased">
 
 <div id="site-header"></div>
 
-<main class="bg-white">
-  <header class="border-b border-[#1a1a1a]/10 px-6 pb-10 pt-12 md:px-12 md:pb-14 md:pt-16 lg:px-20">
-    <nav class="mb-6 flex gap-2 text-[11px] font-light uppercase tracking-[0.15em] text-[#1a1a1a]/40">
-      <a href="index.html" class="transition-colors hover:text-[#1a1a1a]">Accueil</a><span>/</span><span class="text-[#1a1a1a]/70">Collection</span>
+<main class="bg-[#FAF9F7]">
+  <header class="border-b border-[#111]/10 px-6 pb-10 pt-12 md:px-12 md:pb-14 md:pt-16 lg:px-20">
+    <nav class="mb-6 flex gap-2 text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/40">
+      <a href="index.html" class="transition-colors hover:text-[#111]">Accueil</a><span>/</span><span class="text-[#111]/70">Collection</span>
     </nav>
-    <h1 class="font-light leading-tight tracking-tight text-[#1a1a1a] text-4xl md:text-5xl lg:text-6xl">Capsule Automne</h1>
-    <p class="mt-5 max-w-lg text-sm font-light leading-relaxed text-[#1a1a1a]/60">Six pièces conçues pour durer. Matières européennes, ateliers portugais, séries limitées.</p>
+    <h1 class="font-serif font-light leading-tight tracking-tight text-[#111] text-4xl md:text-5xl lg:text-6xl">Capsule Automne</h1>
+    <p class="mt-5 max-w-lg text-sm font-light leading-relaxed text-[#111]/60">Six pièces conçues pour durer. Matières européennes, ateliers portugais, séries limitées.</p>
   </header>
 
   <div class="lg:grid lg:grid-cols-12">
 
-    <aside class="hidden border-r border-[#1a1a1a]/10 px-6 py-10 lg:col-span-3 lg:block lg:px-8 xl:px-12">
+    <aside class="hidden border-r border-[#111]/10 px-6 py-10 lg:col-span-3 lg:block lg:px-8 xl:px-12">
       <div class="sticky top-[97px]">
         <div class="flex items-baseline justify-between">
-          <h2 class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Filtrer</h2>
-          <button type="button" data-clear class="text-[11px] font-light uppercase tracking-[0.15em] text-[#1a1a1a]/40 underline underline-offset-4 transition-colors hover:text-[#1a1a1a]">Effacer</button>
+          <h2 class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Filtrer</h2>
+          <button type="button" data-clear class="text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/40 underline underline-offset-4 transition-colors hover:text-[#111]">Effacer</button>
         </div>
 
         <div data-filter-source class="mt-8 space-y-1">
 
-          <details class="group border-b border-[#1a1a1a]/10" open>
-            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Catégorie
+          <details class="group border-b border-[#111]/10" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Catégorie
               <svg class="h-3.5 w-3.5 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24"><path stroke-linecap="square" d="M12 5v14M5 12h14"/></svg>
             </summary>
             <div class="space-y-3 pb-5">
-              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="category" value="hauts" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#1a1a1a]/25 transition-colors peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#1a1a1a]/70">Hauts</span><span class="text-[11px] font-light text-[#1a1a1a]/30">2</span></label>
-              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="category" value="bas" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#1a1a1a]/25 transition-colors peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#1a1a1a]/70">Bas</span><span class="text-[11px] font-light text-[#1a1a1a]/30">1</span></label>
-              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="category" value="vestes" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#1a1a1a]/25 transition-colors peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#1a1a1a]/70">Vestes</span><span class="text-[11px] font-light text-[#1a1a1a]/30">1</span></label>
-              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="category" value="accessoires" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#1a1a1a]/25 transition-colors peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#1a1a1a]/70">Accessoires</span><span class="text-[11px] font-light text-[#1a1a1a]/30">2</span></label>
+              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="category" value="hauts" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#111]/25 transition-colors peer-checked:border-[#111] peer-checked:bg-[#111]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#111]/70">Hauts</span><span class="text-[11px] font-light text-[#111]/30">2</span></label>
+              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="category" value="bas" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#111]/25 transition-colors peer-checked:border-[#111] peer-checked:bg-[#111]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#111]/70">Bas</span><span class="text-[11px] font-light text-[#111]/30">1</span></label>
+              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="category" value="vestes" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#111]/25 transition-colors peer-checked:border-[#111] peer-checked:bg-[#111]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#111]/70">Vestes</span><span class="text-[11px] font-light text-[#111]/30">1</span></label>
+              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="category" value="accessoires" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#111]/25 transition-colors peer-checked:border-[#111] peer-checked:bg-[#111]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#111]/70">Accessoires</span><span class="text-[11px] font-light text-[#111]/30">2</span></label>
             </div>
           </details>
 
-          <details class="group border-b border-[#1a1a1a]/10" open>
-            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Taille
+          <details class="group border-b border-[#111]/10" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Taille
               <svg class="h-3.5 w-3.5 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24"><path stroke-linecap="square" d="M12 5v14M5 12h14"/></svg>
             </summary>
             <div class="grid grid-cols-5 gap-1.5 pb-5">
-              <label><input type="checkbox" data-filter="size" value="XS" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#1a1a1a]/15 py-2.5 text-[11px] font-medium uppercase text-[#1a1a1a] transition-all hover:border-[#1a1a1a] peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a] peer-checked:text-white">XS</span></label>
-              <label><input type="checkbox" data-filter="size" value="S" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#1a1a1a]/15 py-2.5 text-[11px] font-medium uppercase text-[#1a1a1a] transition-all hover:border-[#1a1a1a] peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a] peer-checked:text-white">S</span></label>
-              <label><input type="checkbox" data-filter="size" value="M" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#1a1a1a]/15 py-2.5 text-[11px] font-medium uppercase text-[#1a1a1a] transition-all hover:border-[#1a1a1a] peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a] peer-checked:text-white">M</span></label>
-              <label><input type="checkbox" data-filter="size" value="L" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#1a1a1a]/15 py-2.5 text-[11px] font-medium uppercase text-[#1a1a1a] transition-all hover:border-[#1a1a1a] peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a] peer-checked:text-white">L</span></label>
-              <label><input type="checkbox" data-filter="size" value="XL" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#1a1a1a]/15 py-2.5 text-[11px] font-medium uppercase text-[#1a1a1a] transition-all hover:border-[#1a1a1a] peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a] peer-checked:text-white">XL</span></label>
+              <label><input type="checkbox" data-filter="size" value="XS" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all hover:border-[#111] peer-checked:border-[#111] peer-checked:bg-[#111] peer-checked:text-white">XS</span></label>
+              <label><input type="checkbox" data-filter="size" value="S" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all hover:border-[#111] peer-checked:border-[#111] peer-checked:bg-[#111] peer-checked:text-white">S</span></label>
+              <label><input type="checkbox" data-filter="size" value="M" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all hover:border-[#111] peer-checked:border-[#111] peer-checked:bg-[#111] peer-checked:text-white">M</span></label>
+              <label><input type="checkbox" data-filter="size" value="L" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all hover:border-[#111] peer-checked:border-[#111] peer-checked:bg-[#111] peer-checked:text-white">L</span></label>
+              <label><input type="checkbox" data-filter="size" value="XL" class="peer sr-only"><span class="flex cursor-pointer items-center justify-center border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all hover:border-[#111] peer-checked:border-[#111] peer-checked:bg-[#111] peer-checked:text-white">XL</span></label>
             </div>
           </details>
 
-          <details class="group border-b border-[#1a1a1a]/10" open>
-            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Couleur
+          <details class="group border-b border-[#111]/10" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Couleur
               <svg class="h-3.5 w-3.5 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24"><path stroke-linecap="square" d="M12 5v14M5 12h14"/></svg>
             </summary>
             <div class="space-y-3 pb-5">
-              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="color" value="ecru" class="peer sr-only"><span class="h-4 w-4 shrink-0 rounded-full border border-[#1a1a1a]/15 bg-[#f4f2ef] ring-offset-2 transition-all peer-checked:ring-1 peer-checked:ring-[#1a1a1a]"></span><span class="flex-1 text-sm font-light text-[#1a1a1a]/70">Écru</span><span class="text-[11px] font-light text-[#1a1a1a]/30">2</span></label>
-              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="color" value="sable" class="peer sr-only"><span class="h-4 w-4 shrink-0 rounded-full border border-[#1a1a1a]/15 bg-[#dedad3] ring-offset-2 transition-all peer-checked:ring-1 peer-checked:ring-[#1a1a1a]"></span><span class="flex-1 text-sm font-light text-[#1a1a1a]/70">Sable</span><span class="text-[11px] font-light text-[#1a1a1a]/30">2</span></label>
-              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="color" value="encre" class="peer sr-only"><span class="h-4 w-4 shrink-0 rounded-full border border-[#1a1a1a]/15 bg-[#1a1a1a] ring-offset-2 transition-all peer-checked:ring-1 peer-checked:ring-[#1a1a1a]"></span><span class="flex-1 text-sm font-light text-[#1a1a1a]/70">Encre</span><span class="text-[11px] font-light text-[#1a1a1a]/30">2</span></label>
+              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="color" value="ecru" class="peer sr-only"><span class="h-4 w-4 shrink-0 rounded-full border border-[#111]/15 bg-[#f4f2ef] ring-offset-2 transition-all peer-checked:ring-1 peer-checked:ring-[#111]"></span><span class="flex-1 text-sm font-light text-[#111]/70">Écru</span><span class="text-[11px] font-light text-[#111]/30">2</span></label>
+              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="color" value="sable" class="peer sr-only"><span class="h-4 w-4 shrink-0 rounded-full border border-[#111]/15 bg-[#dedad3] ring-offset-2 transition-all peer-checked:ring-1 peer-checked:ring-[#111]"></span><span class="flex-1 text-sm font-light text-[#111]/70">Sable</span><span class="text-[11px] font-light text-[#111]/30">2</span></label>
+              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="color" value="encre" class="peer sr-only"><span class="h-4 w-4 shrink-0 rounded-full border border-[#111]/15 bg-[#111] ring-offset-2 transition-all peer-checked:ring-1 peer-checked:ring-[#111]"></span><span class="flex-1 text-sm font-light text-[#111]/70">Encre</span><span class="text-[11px] font-light text-[#111]/30">2</span></label>
             </div>
           </details>
 
-          <details class="group border-b border-[#1a1a1a]/10">
-            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Prix
+          <details class="group border-b border-[#111]/10">
+            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Prix
               <svg class="h-3.5 w-3.5 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24"><path stroke-linecap="square" d="M12 5v14M5 12h14"/></svg>
             </summary>
             <div class="pb-6 pt-2">
-              <input type="range" data-price min="0" max="400" value="400" step="10" class="h-px w-full cursor-pointer appearance-none bg-[#1a1a1a]/20 [&amp;::-webkit-slider-thumb]:h-3 [&amp;::-webkit-slider-thumb]:w-3 [&amp;::-webkit-slider-thumb]:appearance-none [&amp;::-webkit-slider-thumb]:rounded-full [&amp;::-webkit-slider-thumb]:bg-[#1a1a1a]">
-              <div class="mt-4 flex justify-between text-[11px] font-light tracking-wide text-[#1a1a1a]/50"><span>0 €</span><span data-price-label class="text-[#1a1a1a]">400 €</span></div>
+              <input type="range" data-price min="0" max="400" value="400" step="10" class="h-px w-full cursor-pointer appearance-none bg-[#111]/20 [&amp;::-webkit-slider-thumb]:h-3 [&amp;::-webkit-slider-thumb]:w-3 [&amp;::-webkit-slider-thumb]:appearance-none [&amp;::-webkit-slider-thumb]:rounded-full [&amp;::-webkit-slider-thumb]:bg-[#111]">
+              <div class="mt-4 flex justify-between text-[11px] font-light tracking-wide text-[#111]/50"><span>0 €</span><span data-price-label class="text-[#111]">400 €</span></div>
             </div>
           </details>
 
-          <details class="group border-b border-[#1a1a1a]/10">
-            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Disponibilité
+          <details class="group border-b border-[#111]/10">
+            <summary class="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Disponibilité
               <svg class="h-3.5 w-3.5 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24"><path stroke-linecap="square" d="M12 5v14M5 12h14"/></svg>
             </summary>
             <div class="space-y-3 pb-5">
-              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="stock" value="in" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#1a1a1a]/25 transition-colors peer-checked:border-[#1a1a1a] peer-checked:bg-[#1a1a1a]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#1a1a1a]/70">En stock</span><span class="text-[11px] font-light text-[#1a1a1a]/30">5</span></label>
+              <label class="flex cursor-pointer items-center gap-3"><input type="checkbox" data-filter="stock" value="in" class="peer sr-only"><span class="flex h-4 w-4 shrink-0 items-center justify-center border border-[#111]/25 transition-colors peer-checked:border-[#111] peer-checked:bg-[#111]"><svg class="h-2.5 w-2.5 text-white opacity-0 transition-opacity peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="square" d="m5 13 4 4L19 7"/></svg></span><span class="flex-1 text-sm font-light text-[#111]/70">En stock</span><span class="text-[11px] font-light text-[#111]/30">5</span></label>
             </div>
           </details>
 
@@ -95,14 +96,14 @@
     </aside>
 
     <section class="px-6 py-8 md:px-12 lg:col-span-9 lg:px-10 lg:py-10 xl:px-14">
-      <div class="flex items-center justify-between gap-4 border-b border-[#1a1a1a]/10 pb-5">
-        <button type="button" data-filters-open class="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] lg:hidden">
+      <div class="flex items-center justify-between gap-4 border-b border-[#111]/10 pb-5">
+        <button type="button" data-filters-open class="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111] lg:hidden">
           <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24"><path stroke-linecap="square" d="M3 6h18M6 12h12M10 18h4"/></svg>Filtrer
         </button>
-        <p class="hidden text-[11px] font-light uppercase tracking-[0.15em] text-[#1a1a1a]/45 lg:block"><span data-count>6</span> articles</p>
+        <p class="hidden text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/45 lg:block"><span data-count>6</span> articles</p>
         <label class="flex items-center gap-2">
           <span class="sr-only">Trier par</span>
-          <select data-sort class="cursor-pointer appearance-none border-0 bg-transparent py-1 pr-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] focus:outline-none">
+          <select data-sort class="cursor-pointer appearance-none border-0 bg-transparent py-1 pr-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111] focus:outline-none">
             <option value="featured">En vedette</option>
             <option value="asc">Prix croissant</option>
             <option value="desc">Prix décroissant</option>
@@ -114,35 +115,35 @@
 
       <div data-grid class="grid grid-cols-2 gap-x-4 gap-y-12 pt-8 md:gap-x-6 lg:grid-cols-3">
         <article class="group" data-category="hauts" data-color="ecru" data-price="180" data-sizes="XS,S,M,L" data-stock="in">
-          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="https://placehold.co/800x1000/f4f2ef/1a1a1a?text=01" alt="Chemise Lin Écru" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"></a>
-          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#1a1a1a]">Chemise Lin Écru</h3><p class="mt-1 text-sm font-light text-[#1a1a1a]/60">180 €</p>
+          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="assets/img/p01-chemise.svg" alt="Chemise Lin Écru" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"></a>
+          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#111]">Chemise Lin Écru</h3><p class="mt-1 text-sm font-light text-[#111]/60">180 €</p>
         </article>
         <article class="group" data-category="bas" data-color="encre" data-price="240" data-sizes="S,M,L" data-stock="in">
-          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="https://placehold.co/800x1000/eae7e2/1a1a1a?text=02" alt="Pantalon Taille Haute" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"></a>
-          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#1a1a1a]">Pantalon Taille Haute</h3><p class="mt-1 text-sm font-light text-[#1a1a1a]/60">240 €</p>
+          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="assets/img/p02-pantalon.svg" alt="Pantalon Taille Haute" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"></a>
+          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#111]">Pantalon Taille Haute</h3><p class="mt-1 text-sm font-light text-[#111]/60">240 €</p>
         </article>
         <article class="group" data-category="vestes" data-color="sable" data-price="390" data-sizes="S,M" data-stock="low">
-          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="https://placehold.co/800x1000/dedad3/1a1a1a?text=03" alt="Veste Structurée" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"><span class="absolute left-3 top-3 bg-white px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-[#1a1a1a]">Dernières pièces</span></a>
-          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#1a1a1a]">Veste Structurée</h3><p class="mt-1 text-sm font-light text-[#1a1a1a]/60">390 €</p>
+          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="assets/img/p03-veste.svg" alt="Veste Structurée" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"><span class="absolute left-3 top-3 bg-white px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-[#111]">Dernières pièces</span></a>
+          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#111]">Veste Structurée</h3><p class="mt-1 text-sm font-light text-[#111]/60">390 €</p>
         </article>
         <article class="group" data-category="accessoires" data-color="encre" data-price="120" data-sizes="S,M,L" data-stock="in">
-          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="https://placehold.co/800x1000/e8e6e1/1a1a1a?text=04" alt="Ceinture Cuir" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"></a>
-          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#1a1a1a]">Ceinture Cuir</h3><p class="mt-1 text-sm font-light text-[#1a1a1a]/60">120 €</p>
+          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="assets/img/p02-pantalon.svg" alt="Ceinture Cuir" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"></a>
+          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#111]">Ceinture Cuir</h3><p class="mt-1 text-sm font-light text-[#111]/60">120 €</p>
         </article>
         <article class="group" data-category="accessoires" data-color="ecru" data-price="95" data-sizes="XS,S,M,L,XL" data-stock="in">
-          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="https://placehold.co/800x1000/f0ede8/1a1a1a?text=05" alt="Foulard Soie" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"><span class="absolute left-3 top-3 bg-[#1a1a1a] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-white">Nouveau</span></a>
-          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#1a1a1a]">Foulard Soie</h3><p class="mt-1 text-sm font-light text-[#1a1a1a]/60">95 €</p>
+          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="assets/img/p01-chemise.svg" alt="Foulard Soie" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"><span class="absolute left-3 top-3 bg-[#111] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-white">Nouveau</span></a>
+          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#111]">Foulard Soie</h3><p class="mt-1 text-sm font-light text-[#111]/60">95 €</p>
         </article>
         <article class="group" data-category="hauts" data-color="sable" data-price="140" data-sizes="M,L,XL" data-stock="in">
-          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="https://placehold.co/800x1000/f4f2ef/1a1a1a?text=06" alt="Sac Toile" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"></a>
-          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#1a1a1a]">Sac Toile</h3><p class="mt-1 text-sm font-light text-[#1a1a1a]/60">140 €</p>
+          <a href="produit.html" class="relative block overflow-hidden bg-[#f4f2ef]"><img src="assets/img/p01-chemise.svg" alt="Sac Toile" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"></a>
+          <h3 class="mt-4 text-sm font-normal tracking-wide text-[#111]">Sac Toile</h3><p class="mt-1 text-sm font-light text-[#111]/60">140 €</p>
         </article>
       </div>
 
       <div data-empty class="hidden py-24 text-center">
-        <h2 class="font-light tracking-tight text-[#1a1a1a] text-2xl">Aucun article</h2>
-        <p class="mx-auto mt-4 max-w-sm text-sm font-light leading-relaxed text-[#1a1a1a]/50">Élargir la sélection pour voir plus de pièces.</p>
-        <button type="button" data-clear class="mt-8 inline-flex items-center justify-center border border-[#1a1a1a] px-10 py-4 text-[11px] font-medium uppercase tracking-[0.25em] text-[#1a1a1a] transition-colors duration-300 hover:bg-[#1a1a1a] hover:text-white">Effacer les filtres</button>
+        <h2 class="font-serif font-light tracking-tight text-[#111] text-2xl">Aucun article</h2>
+        <p class="mx-auto mt-4 max-w-sm text-sm font-light leading-relaxed text-[#111]/50">Élargir la sélection pour voir plus de pièces.</p>
+        <button type="button" data-clear class="mt-8 inline-flex items-center justify-center border border-[#111] px-10 py-4 text-[11px] font-medium uppercase tracking-[0.25em] text-[#111] transition-colors duration-300 hover:bg-[#111] hover:text-white">Effacer les filtres</button>
       </div>
     </section>
   </div>
@@ -150,14 +151,14 @@
   <div data-filters-panel class="pointer-events-none fixed inset-0 z-[60] opacity-0 transition-opacity duration-300 lg:hidden">
     <div data-filters-close class="absolute inset-0 bg-black/20"></div>
     <div data-filters-sheet class="absolute inset-x-0 bottom-0 flex max-h-[85vh] translate-y-full flex-col bg-white transition-transform duration-300 ease-out">
-      <div class="flex items-center justify-between border-b border-[#1a1a1a]/10 px-6 py-5">
-        <h2 class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Filtrer</h2>
-        <button type="button" aria-label="Fermer" data-filters-close class="p-1 text-[#1a1a1a]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24"><path stroke-linecap="square" d="M5 5l14 14M19 5L5 19"/></svg></button>
+      <div class="flex items-center justify-between border-b border-[#111]/10 px-6 py-5">
+        <h2 class="text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Filtrer</h2>
+        <button type="button" aria-label="Fermer" data-filters-close class="p-1 text-[#111]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24"><path stroke-linecap="square" d="M5 5l14 14M19 5L5 19"/></svg></button>
       </div>
       <div data-filters-mobile class="flex-1 overflow-y-auto px-6 py-2"></div>
-      <div class="flex gap-3 border-t border-[#1a1a1a]/10 px-6 py-5">
-        <button type="button" data-clear class="flex-1 border border-[#1a1a1a]/20 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a]">Effacer</button>
-        <button type="button" data-filters-close class="flex-1 bg-[#1a1a1a] py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-white">Voir <span data-count>6</span> articles</button>
+      <div class="flex gap-3 border-t border-[#111]/10 px-6 py-5">
+        <button type="button" data-clear class="flex-1 border border-[#111]/20 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[#111]">Effacer</button>
+        <button type="button" data-filters-close class="flex-1 bg-[#111] py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-white">Voir <span data-count>6</span> articles</button>
       </div>
     </div>
   </div>
@@ -230,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     grid.classList.toggle('hidden', visible === 0);
 
     const all = [...cats, ...sizes, ...colors, ...stock.map(() => 'En stock')];
-    chips.innerHTML = all.map(v => `<button type="button" data-chip="${v}" class="flex items-center gap-1.5 border border-[#1a1a1a]/15 px-3 py-1.5 text-[11px] font-light uppercase tracking-[0.1em] text-[#1a1a1a] transition-colors hover:border-[#1a1a1a]">${v}<span class="text-[#1a1a1a]/40">×</span></button>`).join('');
+    chips.innerHTML = all.map(v => `<button type="button" data-chip="${v}" class="flex items-center gap-1.5 border border-[#111]/15 px-3 py-1.5 text-[11px] font-light uppercase tracking-[0.1em] text-[#111] transition-colors hover:border-[#111]">${v}<span class="text-[#111]/40">×</span></button>`).join('');
     chips.classList.toggle('hidden', !all.length);
     chips.classList.toggle('flex', !!all.length);
     chips.querySelectorAll('[data-chip]').forEach(b => b.addEventListener('click', () => {
