@@ -5,7 +5,6 @@
 const NAV_LINKS = [
   { href: 'collection.html', label: 'Collection' },
   { href: 'produit.html', label: 'Produit' },
-  { href: 'panier.html', label: 'Panier' },
 ];
 
 /* ---------- Navbar ---------- */
