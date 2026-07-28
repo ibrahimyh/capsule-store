@@ -3,91 +3,465 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CAPSULE — Collection capsule automne</title>
-<meta name="description" content="Boutique de démonstration : collection capsule de 3 pièces. Design minimaliste, mobile-first, Tailwind CSS.">
-<meta property="og:title" content="CAPSULE — Collection capsule automne">
-<meta property="og:description" content="Boutique de démonstration. Design minimaliste premium, mobile-first.">
-<meta property="og:type" content="website">
+<title>CAPSULE — Édition 03, Automne 26</title>
+<meta name="description" content="Trois pièces en lin lavé européen. Une collection par saison, produite une seule fois, jamais rééditée.">
+<meta property="og:title" content="CAPSULE — L'essentiel, repensé">
+<meta property="og:description" content="Trois pièces. Lin lavé européen, ateliers portugais. Série limitée à 120 exemplaires.">
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans:  ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>:root{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300..600;1,300..600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .animate-\[marquee_38s_linear_infinite\] { animation: none; }
+  }
+</style>
 </head>
-<body class="bg-white antialiased">
+<body class="bg-[#FAF9F7] font-sans antialiased">
 
-<div id="site-header"></div>
+<!-- ============ BARRE D'ANNONCE ============ -->
+<div class="group/announce relative overflow-hidden bg-[#111] py-2.5">
+  <div class="flex w-max animate-[marquee_38s_linear_infinite] group-hover/announce:[animation-play-state:paused]">
+    <div class="flex shrink-0 items-center">
+      <span class="flex items-center gap-3 px-8 text-[10px] font-medium uppercase tracking-[0.28em] text-white/85">Livraison offerte dès 200 €<span class="text-white/25">✦</span></span>
+      <span class="flex items-center gap-3 px-8 text-[10px] font-medium uppercase tracking-[0.28em] text-white/85">Série limitée — 120 exemplaires<span class="text-white/25">✦</span></span>
+      <span class="flex items-center gap-3 px-8 text-[10px] font-medium uppercase tracking-[0.28em] text-white/85">Retours gratuits 30 jours<span class="text-white/25">✦</span></span>
+      <span class="flex items-center gap-3 px-8 text-[10px] font-medium uppercase tracking-[0.28em] text-white/85">Ateliers portugais<span class="text-white/25">✦</span></span>
+    </div>
+    <div class="flex shrink-0 items-center" aria-hidden="true">
+      <span class="flex items-center gap-3 px-8 text-[10px] font-medium uppercase tracking-[0.28em] text-white/85">Livraison offerte dès 200 €<span class="text-white/25">✦</span></span>
+      <span class="flex items-center gap-3 px-8 text-[10px] font-medium uppercase tracking-[0.28em] text-white/85">Série limitée — 120 exemplaires<span class="text-white/25">✦</span></span>
+      <span class="flex items-center gap-3 px-8 text-[10px] font-medium uppercase tracking-[0.28em] text-white/85">Retours gratuits 30 jours<span class="text-white/25">✦</span></span>
+      <span class="flex items-center gap-3 px-8 text-[10px] font-medium uppercase tracking-[0.28em] text-white/85">Ateliers portugais<span class="text-white/25">✦</span></span>
+    </div>
+  </div>
+</div>
 
-<!-- HERO -->
-<section class="relative h-[100svh] w-full overflow-hidden">
-  <img src="https://placehold.co/1600x2400/e8e6e1/1a1a1a?text=CAPSULE" alt="Collection capsule" class="absolute inset-0 h-full w-full object-cover">
-  <div class="absolute inset-0 bg-black/15"></div>
-  <div class="relative flex h-full flex-col items-start justify-end px-6 pb-20 md:px-12 md:pb-24 lg:px-20">
-    <p class="mb-4 text-[11px] font-light uppercase tracking-[0.3em] text-white/90">Édition limitée — 03 pièces</p>
-    <h1 class="max-w-3xl font-light leading-[0.95] tracking-tight text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-      Capsule<br><span class="italic">Automne</span>
-    </h1>
-    <a href="#collection" class="mt-10 inline-flex items-center justify-center bg-[#1a1a1a] px-10 py-4 text-[11px] font-medium uppercase tracking-[0.25em] text-white transition-colors duration-300 hover:bg-[#333]">Découvrir</a>
+<!-- ============ NAVBAR ============ -->
+<header id="nav" class="sticky top-0 z-50 border-b border-[#111]/[0.07] bg-[#FAF9F7]/85 backdrop-blur-xl transition-all duration-500 ease-out">
+  <nav class="mx-auto flex max-w-[1600px] items-center gap-6 px-5 py-4 md:px-10 lg:px-14">
+
+    <div class="flex flex-1 items-center gap-8">
+      <button type="button" aria-label="Ouvrir le menu" data-menu-open class="-ml-1 p-1 lg:hidden">
+        <span class="block h-px w-6 bg-[#111] transition-all duration-500"></span>
+        <span class="mt-[7px] block h-px w-4 bg-[#111] transition-all duration-500"></span>
+      </button>
+
+      <div class="hidden items-center gap-9 lg:flex">
+        <a href="#capsule" class="group relative py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-[#111] transition-colors duration-500">
+          Capsule<span class="absolute -bottom-0.5 left-0 h-px w-0 bg-[#111] transition-all duration-500 ease-out group-hover:w-full"></span>
+        </a>
+        <a href="#histoire" class="group relative py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-[#111]/55 transition-colors duration-500 hover:text-[#111]">
+          Histoire<span class="absolute -bottom-0.5 left-0 h-px w-0 bg-[#111] transition-all duration-500 ease-out group-hover:w-full"></span>
+        </a>
+        <a href="collection.html" class="group relative py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-[#111]/55 transition-colors duration-500 hover:text-[#111]">
+          Archives<span class="absolute -bottom-0.5 left-0 h-px w-0 bg-[#111] transition-all duration-500 ease-out group-hover:w-full"></span>
+        </a>
+      </div>
+    </div>
+
+    <a href="index.html" class="shrink-0 text-center">
+      <span class="block font-serif text-[26px] leading-none tracking-[0.16em] text-[#111] md:text-[30px]">CAPSULE</span>
+      <span class="mt-1 hidden text-[8px] font-medium uppercase tracking-[0.4em] text-[#111]/35 md:block">Paris — Édition 03</span>
+    </a>
+
+    <div class="flex flex-1 items-center justify-end gap-1.5 md:gap-3">
+      <button type="button" aria-label="Rechercher" class="hidden rounded-full p-2.5 transition-all duration-500 ease-out hover:bg-[#111]/[0.06] sm:block">
+        <svg class="h-[18px] w-[18px] text-[#111]" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button type="button" aria-label="Compte" class="hidden rounded-full p-2.5 transition-all duration-500 ease-out hover:bg-[#111]/[0.06] md:block">
+        <svg class="h-[18px] w-[18px] text-[#111]" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path stroke-linecap="round" d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+      </button>
+
+      <a href="panier.html" class="group ml-1 flex items-center gap-2.5 rounded-full bg-[#111] py-2.5 pl-4 pr-2.5 transition-all duration-500 ease-out hover:bg-[#2b2b2b]">
+        <span class="text-[10px] font-medium uppercase tracking-[0.18em] text-white">Panier</span>
+        <span data-count class="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[11px] font-medium text-[#111] transition-transform duration-500 ease-out group-hover:scale-110">2</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- Menu mobile -->
+<div data-menu-panel class="pointer-events-none fixed inset-0 z-[60] opacity-0 transition-opacity duration-500 lg:hidden">
+  <div data-menu-close class="absolute inset-0 bg-black/25"></div>
+  <div data-menu-sheet class="absolute inset-y-0 left-0 flex w-[86%] max-w-sm -translate-x-full flex-col bg-[#FAF9F7] transition-transform duration-500 ease-out">
+    <div class="flex items-center justify-between border-b border-[#111]/10 px-6 py-5">
+      <span class="font-serif text-xl tracking-[0.16em] text-[#111]">CAPSULE</span>
+      <button type="button" aria-label="Fermer" data-menu-close class="p-1">
+        <svg class="h-5 w-5 text-[#111]" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col px-6 py-8">
+      <a href="#capsule" data-menu-close class="border-b border-[#111]/[0.07] py-5 font-serif text-3xl font-light text-[#111]">Capsule</a>
+      <a href="#histoire" data-menu-close class="border-b border-[#111]/[0.07] py-5 font-serif text-3xl font-light text-[#111]">Histoire</a>
+      <a href="collection.html" class="border-b border-[#111]/[0.07] py-5 font-serif text-3xl font-light text-[#111]">Archives</a>
+      <a href="panier.html" class="border-b border-[#111]/[0.07] py-5 font-serif text-3xl font-light text-[#111]">Panier</a>
+    </nav>
+    <div class="mt-auto border-t border-[#111]/10 px-6 py-6">
+      <p class="text-[10px] font-medium uppercase tracking-[0.2em] text-[#111]/40">Livraison offerte dès 200 €</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden bg-[#FAF9F7]">
+  <span class="pointer-events-none absolute -right-40 top-1/3 hidden select-none font-serif text-[26rem] italic leading-none text-[#111]/[0.035] lg:block">03</span>
+
+  <div class="mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-10 px-5 pb-16 pt-12 md:px-10 lg:grid-cols-12 lg:gap-6 lg:px-14 lg:pb-24 lg:pt-16">
+
+    <div class="relative z-10 lg:col-span-5 lg:pr-4">
+      <div class="flex items-center gap-3">
+        <span class="h-px w-10 bg-[#C7513A]"></span>
+        <span class="text-[10px] font-medium uppercase tracking-[0.3em] text-[#C7513A]">Nouvelle capsule — Automne 26</span>
+      </div>
+
+      <h1 class="mt-7 font-serif text-[15vw] font-light leading-[0.82] tracking-[-0.02em] text-[#111] sm:text-[10vw] lg:text-[6.2vw] xl:text-[6.8rem]">
+        L'essentiel,<br><span class="italic text-[#C7513A]">repensé</span>
+      </h1>
+
+      <p class="mt-8 max-w-sm text-[15px] font-light leading-[1.75] text-[#111]/60">
+        Trois pièces. Lin lavé européen, coupes architecturées, ateliers portugais.
+        Produites une seule fois, jamais rééditées.
+      </p>
+
+      <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+        <a href="#capsule" class="group relative inline-flex items-center justify-center gap-3 overflow-hidden bg-[#111] px-9 py-[18px] transition-all duration-500 ease-out hover:gap-5">
+          <span class="absolute inset-0 -translate-x-full bg-[#C7513A] transition-transform duration-500 ease-out group-hover:translate-x-0"></span>
+          <span class="relative text-[11px] font-medium uppercase tracking-[0.24em] text-white">Découvrir la capsule</span>
+          <svg class="relative h-3.5 w-3.5 text-white transition-transform duration-500 ease-out group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
+        </a>
+
+        <a href="#histoire" class="group inline-flex items-center justify-center gap-2 px-2 py-[18px] text-[11px] font-medium uppercase tracking-[0.24em] text-[#111]/70 transition-colors duration-500 hover:text-[#111]">
+          Notre démarche
+          <span class="h-px w-6 bg-[#111]/30 transition-all duration-500 ease-out group-hover:w-10 group-hover:bg-[#111]"></span>
+        </a>
+      </div>
+
+      <dl class="mt-14 grid max-w-md grid-cols-3 gap-4 border-t border-[#111]/10 pt-7">
+        <div><dt class="font-serif text-3xl font-light text-[#111]">03</dt><dd class="mt-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-[#111]/45">Pièces</dd></div>
+        <div><dt class="font-serif text-3xl font-light text-[#111]">120</dt><dd class="mt-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-[#111]/45">Exemplaires</dd></div>
+        <div><dt class="font-serif text-3xl font-light text-[#111]">100<span class="text-lg">%</span></dt><dd class="mt-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-[#111]/45">Lin européen</dd></div>
+      </dl>
+    </div>
+
+    <div class="relative lg:col-span-7">
+      <div class="grid grid-cols-12 gap-3 md:gap-4">
+
+        <figure class="group relative col-span-8 overflow-hidden bg-[#EDEAE4]">
+          <img src="assets/img/hero-chemise.svg" alt="Chemise en lin lavé, portée ouverte" class="aspect-[4/5] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105">
+          <figcaption class="absolute bottom-0 left-0 right-0 flex items-end justify-between bg-gradient-to-t from-black/45 to-transparent p-5 md:p-7">
+            <div>
+              <p class="font-serif text-xl italic text-white md:text-2xl">Chemise Écru</p>
+              <p class="mt-1 text-[10px] font-medium uppercase tracking-[0.2em] text-white/70">Lin lavé — 180 €</p>
+            </div>
+            <a href="produit.html" aria-label="Voir la chemise" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/95 opacity-0 transition-all duration-500 ease-out group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0">
+              <svg class="h-4 w-4 text-[#111]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+            </a>
+          </figcaption>
+        </figure>
+
+        <div class="col-span-4 flex flex-col gap-3 md:gap-4">
+          <figure class="group relative flex-1 overflow-hidden bg-[#DED9D1]">
+            <img src="assets/img/hero-veste.svg" alt="Détail de la veste structurée" class="h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105">
+            <figcaption class="absolute inset-x-0 bottom-0 p-4">
+              <p class="font-serif text-base italic text-white">Veste</p>
+              <p class="text-[9px] font-medium uppercase tracking-[0.18em] text-white/70">390 €</p>
+            </figcaption>
+          </figure>
+
+          <div class="flex flex-col justify-between bg-[#111] p-5 md:p-6">
+            <svg class="h-5 w-5 text-white/40" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+            <p class="mt-6 font-serif text-lg italic leading-snug text-white">« Moins, mais mieux. »</p>
+            <p class="mt-3 text-[9px] font-medium uppercase tracking-[0.2em] text-white/45">Manifeste — 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3 flex items-center gap-4 md:mt-4">
+        <span class="h-px flex-1 bg-[#111]/10"></span>
+        <span class="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.2em] text-[#111]/40">
+          <span class="relative flex h-1.5 w-1.5"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#C7513A] opacity-75"></span><span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#C7513A]"></span></span>
+          En stock — expédition sous 48 h
+        </span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- GRILLE PRODUITS -->
-<section id="collection" class="bg-white px-6 py-20 md:px-12 md:py-28 lg:px-20">
-  <header class="mb-12 md:mb-16">
-    <h2 class="font-light tracking-tight text-[#1a1a1a] text-3xl md:text-4xl">La collection</h2>
-    <p class="mt-3 text-sm font-light text-[#1a1a1a]/50">Trois pièces. Rien de plus.</p>
-  </header>
+<!-- ============ HISTOIRE ============ -->
+<section id="histoire" class="relative overflow-hidden bg-[#111] py-20 md:py-28 lg:py-36">
+  <div class="mx-auto grid max-w-[1600px] grid-cols-1 gap-12 px-5 md:px-10 lg:grid-cols-12 lg:gap-16 lg:px-14">
 
-  <div class="grid grid-cols-1 gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
-
-    <article class="group">
-      <a href="produit.html" class="block overflow-hidden bg-[#f4f2ef]">
-        <img src="https://placehold.co/800x1000/f4f2ef/1a1a1a?text=01" alt="Chemise Lin Écru" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]">
-      </a>
-      <div class="mt-5">
-        <h3 class="text-sm font-normal tracking-wide text-[#1a1a1a]">Chemise Lin Écru</h3>
-        <p class="mt-1 text-sm font-light text-[#1a1a1a]/60">180 €</p>
-        <button type="button" data-add class="mt-4 w-full border border-[#1a1a1a] bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] transition-colors duration-300 hover:bg-[#1a1a1a] hover:text-white">Ajouter au panier</button>
+    <div class="lg:col-span-5">
+      <div class="grid grid-cols-6 gap-3 md:gap-4">
+        <figure class="col-span-4 overflow-hidden bg-[#2a2a2a]">
+          <img src="assets/img/atelier.svg" alt="Atelier de confection" class="aspect-[4/5] w-full object-cover transition-transform duration-[900ms] ease-out hover:scale-105">
+        </figure>
+        <figure class="col-span-3 col-start-4 -mt-14 overflow-hidden bg-[#333] md:-mt-20">
+          <img src="assets/img/matiere.svg" alt="Détail de la matière lin" class="aspect-square w-full object-cover transition-transform duration-[900ms] ease-out hover:scale-105">
+        </figure>
       </div>
-    </article>
+    </div>
 
-    <article class="group">
-      <a href="produit.html" class="block overflow-hidden bg-[#f4f2ef]">
-        <img src="https://placehold.co/800x1000/eae7e2/1a1a1a?text=02" alt="Pantalon Taille Haute" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]">
-      </a>
-      <div class="mt-5">
-        <h3 class="text-sm font-normal tracking-wide text-[#1a1a1a]">Pantalon Taille Haute</h3>
-        <p class="mt-1 text-sm font-light text-[#1a1a1a]/60">240 €</p>
-        <button type="button" data-add class="mt-4 w-full border border-[#1a1a1a] bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] transition-colors duration-300 hover:bg-[#1a1a1a] hover:text-white">Ajouter au panier</button>
+    <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
+      <span class="text-[10px] font-medium uppercase tracking-[0.3em] text-[#C7513A]">Le concept</span>
+
+      <h2 class="mt-6 font-serif text-4xl font-light leading-[1.08] tracking-[-0.01em] text-white md:text-5xl lg:text-[3.6rem]">
+        Une collection<br>par saison.<br><span class="italic text-white/45">Puis plus rien.</span>
+      </h2>
+
+      <p class="mt-8 max-w-lg text-[15px] font-light leading-[1.85] text-white/55">
+        Nous produisons une seule série, en quantité déterminée à l'avance. Pas de réassort,
+        pas de soldes, pas de stock dormant. Chaque pièce est dessinée pour traverser
+        les saisons plutôt que les suivre.
+      </p>
+
+      <div class="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-white/10 bg-white/10 sm:grid-cols-3">
+        <div class="bg-[#111] p-6 transition-colors duration-500 ease-out hover:bg-[#1a1a1a]">
+          <span class="font-serif text-2xl italic text-[#C7513A]">01</span>
+          <p class="mt-3 text-[11px] font-medium uppercase tracking-[0.16em] text-white">Dessiné à Paris</p>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-white/45">Studio interne, patronage sur mesure.</p>
+        </div>
+        <div class="bg-[#111] p-6 transition-colors duration-500 ease-out hover:bg-[#1a1a1a]">
+          <span class="font-serif text-2xl italic text-[#C7513A]">02</span>
+          <p class="mt-3 text-[11px] font-medium uppercase tracking-[0.16em] text-white">Tissé en Europe</p>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-white/45">Lin normand, filature belge.</p>
+        </div>
+        <div class="bg-[#111] p-6 transition-colors duration-500 ease-out hover:bg-[#1a1a1a]">
+          <span class="font-serif text-2xl italic text-[#C7513A]">03</span>
+          <p class="mt-3 text-[11px] font-medium uppercase tracking-[0.16em] text-white">Cousu au Portugal</p>
+          <p class="mt-2 text-[13px] font-light leading-relaxed text-white/45">Atelier familial, 40 ans de métier.</p>
+        </div>
       </div>
-    </article>
 
-    <article class="group sm:col-span-2 lg:col-span-1">
-      <a href="produit.html" class="block overflow-hidden bg-[#f4f2ef]">
-        <img src="https://placehold.co/800x1000/dedad3/1a1a1a?text=03" alt="Veste Structurée" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+      <a href="#capsule" class="group mt-12 inline-flex w-fit items-center gap-4 border-b border-white/25 pb-2 transition-all duration-500 ease-out hover:border-[#C7513A]">
+        <span class="text-[11px] font-medium uppercase tracking-[0.24em] text-white">Voir les trois pièces</span>
+        <svg class="h-3.5 w-3.5 text-white transition-transform duration-500 ease-out group-hover:translate-x-1.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
       </a>
-      <div class="mt-5">
-        <h3 class="text-sm font-normal tracking-wide text-[#1a1a1a]">Veste Structurée</h3>
-        <p class="mt-1 text-sm font-light text-[#1a1a1a]/60">390 €</p>
-        <button type="button" data-add class="mt-4 w-full border border-[#1a1a1a] bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] transition-colors duration-300 hover:bg-[#1a1a1a] hover:text-white">Ajouter au panier</button>
-      </div>
-    </article>
-
-  </div>
-
-  <div class="mt-16 text-center">
-    <a href="collection.html" class="inline-flex items-center justify-center border border-[#1a1a1a]/20 px-10 py-4 text-[11px] font-medium uppercase tracking-[0.25em] text-[#1a1a1a] transition-colors duration-300 hover:border-[#1a1a1a]">Voir toute la collection</a>
+    </div>
   </div>
 </section>
 
-<div id="site-footer"></div>
+<!-- ============ CAPSULE ============ -->
+<section id="capsule" class="bg-[#FAF9F7] py-20 md:py-28 lg:py-32">
+  <div class="mx-auto max-w-[1600px] px-5 md:px-10 lg:px-14">
 
-<script src="assets/app.js"></script>
+    <header class="flex flex-col gap-6 border-b border-[#111]/10 pb-10 md:flex-row md:items-end md:justify-between">
+      <div>
+        <span class="text-[10px] font-medium uppercase tracking-[0.3em] text-[#C7513A]">Édition 03 — Automne 26</span>
+        <h2 class="mt-5 font-serif text-4xl font-light leading-[0.95] tracking-[-0.01em] text-[#111] md:text-6xl lg:text-7xl">La <span class="italic">capsule</span></h2>
+      </div>
+      <p class="max-w-xs text-sm font-light leading-relaxed text-[#111]/55 md:text-right">
+        Survolez une pièce pour l'ajouter au panier sans quitter la page.
+      </p>
+    </header>
+
+    <div class="mt-12 grid grid-cols-1 gap-x-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-8">
+
+      <article class="group relative lg:col-span-4 lg:-mt-4">
+        <div class="relative overflow-hidden bg-[#EDEAE4]">
+          <a href="produit.html" class="block"><img src="assets/img/p01-chemise.svg" alt="Chemise Lin Écru" class="aspect-[3/4] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.06]"></a>
+          <span class="absolute left-4 top-4 bg-[#111] px-3 py-1.5 text-[9px] font-medium uppercase tracking-[0.18em] text-white">Best-seller</span>
+          <button type="button" aria-label="Ajouter aux favoris" class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 opacity-0 backdrop-blur transition-all duration-500 ease-out hover:bg-white group-hover:opacity-100">
+            <svg class="h-4 w-4 text-[#111]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 2.5c0 5-7 9.5-7 9.5Z"/></svg>
+          </button>
+          <div class="absolute inset-x-0 bottom-0 translate-y-full bg-white/95 p-4 backdrop-blur-md transition-transform duration-500 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0">
+            <p class="mb-3 text-center text-[9px] font-medium uppercase tracking-[0.2em] text-[#111]/45">Ajout rapide</p>
+            <div class="flex gap-1.5">
+              <button type="button" data-quick-add="Chemise Lin Écru" data-size="XS" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">XS</button>
+              <button type="button" data-quick-add="Chemise Lin Écru" data-size="S" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">S</button>
+              <button type="button" data-quick-add="Chemise Lin Écru" data-size="M" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">M</button>
+              <button type="button" data-quick-add="Chemise Lin Écru" data-size="L" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">L</button>
+              <button type="button" disabled class="flex-1 cursor-not-allowed border border-[#111]/10 py-2.5 text-[11px] font-medium uppercase text-[#111]/20 line-through">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-serif text-xl font-light text-[#111]"><a href="produit.html" class="transition-colors duration-500 hover:text-[#C7513A]">Chemise Lin Écru</a></h3>
+            <p class="mt-1.5 text-[11px] font-light uppercase tracking-[0.14em] text-[#111]/45">Lin lavé — 4 coloris</p>
+          </div>
+          <p class="shrink-0 font-serif text-xl font-light text-[#111]">180 €</p>
+        </div>
+      </article>
+
+      <article class="group relative lg:col-span-4 lg:mt-16">
+        <div class="relative overflow-hidden bg-[#E4E0D8]">
+          <a href="produit.html" class="block"><img src="assets/img/p02-pantalon.svg" alt="Pantalon Taille Haute" class="aspect-[3/4] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.06]"></a>
+          <button type="button" aria-label="Ajouter aux favoris" class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 opacity-0 backdrop-blur transition-all duration-500 ease-out hover:bg-white group-hover:opacity-100">
+            <svg class="h-4 w-4 text-[#111]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 2.5c0 5-7 9.5-7 9.5Z"/></svg>
+          </button>
+          <div class="absolute inset-x-0 bottom-0 translate-y-full bg-white/95 p-4 backdrop-blur-md transition-transform duration-500 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0">
+            <p class="mb-3 text-center text-[9px] font-medium uppercase tracking-[0.2em] text-[#111]/45">Ajout rapide</p>
+            <div class="flex gap-1.5">
+              <button type="button" data-quick-add="Pantalon Taille Haute" data-size="XS" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">XS</button>
+              <button type="button" data-quick-add="Pantalon Taille Haute" data-size="S" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">S</button>
+              <button type="button" data-quick-add="Pantalon Taille Haute" data-size="M" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">M</button>
+              <button type="button" data-quick-add="Pantalon Taille Haute" data-size="L" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">L</button>
+              <button type="button" data-quick-add="Pantalon Taille Haute" data-size="XL" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-serif text-xl font-light text-[#111]"><a href="produit.html" class="transition-colors duration-500 hover:text-[#C7513A]">Pantalon Taille Haute</a></h3>
+            <p class="mt-1.5 text-[11px] font-light uppercase tracking-[0.14em] text-[#111]/45">Coupe droite — 2 coloris</p>
+          </div>
+          <p class="shrink-0 font-serif text-xl font-light text-[#111]">240 €</p>
+        </div>
+      </article>
+
+      <article class="group relative sm:col-span-2 lg:col-span-4 lg:mt-4">
+        <div class="relative overflow-hidden bg-[#DED9D1]">
+          <a href="produit.html" class="block"><img src="assets/img/p03-veste.svg" alt="Veste Structurée" class="aspect-[3/4] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.06]"></a>
+          <span class="absolute left-4 top-4 flex items-center gap-2 bg-[#C7513A] px-3 py-1.5 text-[9px] font-medium uppercase tracking-[0.18em] text-white"><span class="h-1 w-1 rounded-full bg-white"></span>Plus que 4</span>
+          <button type="button" aria-label="Ajouter aux favoris" class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 opacity-0 backdrop-blur transition-all duration-500 ease-out hover:bg-white group-hover:opacity-100">
+            <svg class="h-4 w-4 text-[#111]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 2.5c0 5-7 9.5-7 9.5Z"/></svg>
+          </button>
+          <div class="absolute inset-x-0 bottom-0 translate-y-full bg-white/95 p-4 backdrop-blur-md transition-transform duration-500 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0">
+            <p class="mb-3 text-center text-[9px] font-medium uppercase tracking-[0.2em] text-[#111]/45">Ajout rapide</p>
+            <div class="flex gap-1.5">
+              <button type="button" disabled class="flex-1 cursor-not-allowed border border-[#111]/10 py-2.5 text-[11px] font-medium uppercase text-[#111]/20 line-through">XS</button>
+              <button type="button" data-quick-add="Veste Structurée" data-size="S" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">S</button>
+              <button type="button" data-quick-add="Veste Structurée" data-size="M" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">M</button>
+              <button type="button" data-quick-add="Veste Structurée" data-size="L" class="flex-1 border border-[#111]/15 py-2.5 text-[11px] font-medium uppercase text-[#111] transition-all duration-300 ease-out hover:border-[#111] hover:bg-[#111] hover:text-white">L</button>
+              <button type="button" disabled class="flex-1 cursor-not-allowed border border-[#111]/10 py-2.5 text-[11px] font-medium uppercase text-[#111]/20 line-through">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-serif text-xl font-light text-[#111]"><a href="produit.html" class="transition-colors duration-500 hover:text-[#C7513A]">Veste Structurée</a></h3>
+            <p class="mt-1.5 text-[11px] font-light uppercase tracking-[0.14em] text-[#111]/45">Épaules construites — 1 coloris</p>
+          </div>
+          <p class="shrink-0 font-serif text-xl font-light text-[#111]">390 €</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-20 grid grid-cols-2 gap-8 border-t border-[#111]/10 pt-10 md:grid-cols-4">
+      <div class="flex items-start gap-3">
+        <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#C7513A]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16l-1 12H5L4 7Zm5 0V5a3 3 0 0 1 6 0v2"/></svg>
+        <div><p class="text-[11px] font-medium uppercase tracking-[0.14em] text-[#111]">Livraison offerte</p><p class="mt-1 text-[12px] font-light text-[#111]/45">Dès 200 € en Europe</p></div>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#C7513A]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 12a9 9 0 1 0 3-6.7M3 4v4h4"/></svg>
+        <div><p class="text-[11px] font-medium uppercase tracking-[0.14em] text-[#111]">Retours gratuits</p><p class="mt-1 text-[12px] font-light text-[#111]/45">30 jours, sans condition</p></div>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#C7513A]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3Z"/></svg>
+        <div><p class="text-[11px] font-medium uppercase tracking-[0.14em] text-[#111]">Paiement sécurisé</p><p class="mt-1 text-[12px] font-light text-[#111]/45">3× sans frais dès 150 €</p></div>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#C7513A]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 7v5l3 2m6-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+        <div><p class="text-[11px] font-medium uppercase tracking-[0.14em] text-[#111]">Expédition 48 h</p><p class="mt-1 text-[12px] font-light text-[#111]/45">Suivi Colissimo</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PIED DE PAGE ============ -->
+<footer class="border-t border-[#111]/10 bg-[#FAF9F7] px-5 pb-10 pt-20 md:px-10 lg:px-14">
+  <div class="mx-auto max-w-[1600px]">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-serif text-3xl font-light leading-tight text-[#111] md:text-4xl">Prochaine capsule</h2>
+      <p class="mx-auto mt-4 max-w-md text-sm font-light leading-relaxed text-[#111]/55">Accès anticipé. Trois envois par an. Rien d'autre.</p>
+      <form data-newsletter class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-0">
+        <label for="nl" class="sr-only">Adresse e-mail</label>
+        <input id="nl" type="email" required placeholder="Adresse e-mail" class="w-full border border-[#111]/20 bg-transparent px-5 py-4 text-sm font-light text-[#111] transition-colors duration-500 placeholder:text-[#111]/35 focus:border-[#111] focus:outline-none sm:border-r-0">
+        <button type="submit" class="shrink-0 bg-[#111] px-10 py-4 text-[11px] font-medium uppercase tracking-[0.24em] text-white transition-colors duration-500 ease-out hover:bg-[#C7513A]">S'inscrire</button>
+      </form>
+      <p data-nl-msg class="mt-4 text-[11px] font-light text-[#111]/40">Désinscription à tout moment.</p>
+    </div>
+
+    <div class="mt-20 flex flex-col gap-6 border-t border-[#111]/10 pt-8 md:flex-row md:items-center md:justify-between">
+      <p class="font-serif text-2xl tracking-[0.16em] text-[#111]">CAPSULE</p>
+      <div class="flex flex-wrap gap-x-6 gap-y-2">
+        <a href="collection.html" class="text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/45 transition-colors duration-500 hover:text-[#111]">Collection</a>
+        <a href="produit.html" class="text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/45 transition-colors duration-500 hover:text-[#111]">Produit</a>
+        <a href="panier.html" class="text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/45 transition-colors duration-500 hover:text-[#111]">Panier</a>
+        <a href="index-minimal.html" class="text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/45 transition-colors duration-500 hover:text-[#111]">Version minimaliste</a>
+      </div>
+      <p class="text-[11px] font-light text-[#111]/40">© 2026 Capsule — projet de démonstration</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TOAST ============ -->
+<div data-toast class="pointer-events-none fixed bottom-6 left-1/2 z-[80] w-[calc(100%-2rem)] max-w-sm -translate-x-1/2 translate-y-6 opacity-0 transition-all duration-500 ease-out">
+  <div class="flex items-center gap-4 bg-[#111] p-4 shadow-2xl">
+    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#C7513A]">
+      <svg class="h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="m5 13 4 4L19 7"/></svg>
+    </span>
+    <div class="flex-1">
+      <p data-toast-title class="text-[12px] font-medium text-white">Ajouté au panier</p>
+      <p data-toast-sub class="mt-0.5 text-[11px] font-light text-white/50">Taille M</p>
+    </div>
+    <a href="panier.html" class="pointer-events-auto shrink-0 border-b border-white/30 pb-0.5 text-[10px] font-medium uppercase tracking-[0.16em] text-white transition-colors duration-500 hover:border-[#C7513A]">Voir</a>
+  </div>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', () => {
-    document.querySelector('[data-cart-open]').click();
-  }));
+  const toast = document.querySelector('[data-toast]');
+  const title = toast.querySelector('[data-toast-title]');
+  const sub   = toast.querySelector('[data-toast-sub]');
+  const count = document.querySelector('[data-count]');
+  let timer;
+
+  document.querySelectorAll('[data-quick-add]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      count.textContent = +count.textContent + 1;
+      count.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.35)' }, { transform: 'scale(1)' }], { duration: 450, easing: 'ease-out' });
+
+      title.textContent = btn.dataset.quickAdd;
+      sub.textContent = 'Taille ' + btn.dataset.size + ' — ajouté au panier';
+
+      toast.classList.remove('translate-y-6', 'opacity-0');
+      clearTimeout(timer);
+      timer = setTimeout(() => toast.classList.add('translate-y-6', 'opacity-0'), 3200);
+    });
+  });
+
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => nav.classList.toggle('shadow-[0_1px_24px_rgba(0,0,0,0.06)]', scrollY > 10));
+
+  const panel = document.querySelector('[data-menu-panel]');
+  const sheet = panel.querySelector('[data-menu-sheet]');
+  const set = open => {
+    panel.classList.toggle('pointer-events-none', !open);
+    panel.classList.toggle('opacity-0', !open);
+    sheet.classList.toggle('-translate-x-full', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  document.querySelector('[data-menu-open]').addEventListener('click', () => set(true));
+  panel.querySelectorAll('[data-menu-close]').forEach(b => b.addEventListener('click', () => set(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+
+  const nl = document.querySelector('[data-newsletter]');
+  nl.addEventListener('submit', e => {
+    e.preventDefault();
+    const msg = document.querySelector('[data-nl-msg]');
+    msg.textContent = 'Inscription enregistrée — démo, aucun e-mail envoyé.';
+    msg.classList.replace('text-[#111]/40', 'text-[#111]');
+    nl.reset();
+  });
 });
 </script>
 </body>
