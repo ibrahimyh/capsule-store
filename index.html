@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAPSULE — Collection capsule automne</title>
+<meta name="description" content="Boutique de démonstration : collection capsule de 3 pièces. Design minimaliste, mobile-first, Tailwind CSS.">
+<meta property="og:title" content="CAPSULE — Collection capsule automne">
+<meta property="og:description" content="Boutique de démonstration. Design minimaliste premium, mobile-first.">
+<meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>:root{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}</style>
+</head>
+<body class="bg-white antialiased">
+
+<div id="site-header"></div>
+
+<!-- HERO -->
+<section class="relative h-[100svh] w-full overflow-hidden">
+  <img src="https://placehold.co/1600x2400/e8e6e1/1a1a1a?text=CAPSULE" alt="Collection capsule" class="absolute inset-0 h-full w-full object-cover">
+  <div class="absolute inset-0 bg-black/15"></div>
+  <div class="relative flex h-full flex-col items-start justify-end px-6 pb-20 md:px-12 md:pb-24 lg:px-20">
+    <p class="mb-4 text-[11px] font-light uppercase tracking-[0.3em] text-white/90">Édition limitée — 03 pièces</p>
+    <h1 class="max-w-3xl font-light leading-[0.95] tracking-tight text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+      Capsule<br><span class="italic">Automne</span>
+    </h1>
+    <a href="#collection" class="mt-10 inline-flex items-center justify-center bg-[#1a1a1a] px-10 py-4 text-[11px] font-medium uppercase tracking-[0.25em] text-white transition-colors duration-300 hover:bg-[#333]">Découvrir</a>
+  </div>
+</section>
+
+<!-- GRILLE PRODUITS -->
+<section id="collection" class="bg-white px-6 py-20 md:px-12 md:py-28 lg:px-20">
+  <header class="mb-12 md:mb-16">
+    <h2 class="font-light tracking-tight text-[#1a1a1a] text-3xl md:text-4xl">La collection</h2>
+    <p class="mt-3 text-sm font-light text-[#1a1a1a]/50">Trois pièces. Rien de plus.</p>
+  </header>
+
+  <div class="grid grid-cols-1 gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+
+    <article class="group">
+      <a href="produit.html" class="block overflow-hidden bg-[#f4f2ef]">
+        <img src="https://placehold.co/800x1000/f4f2ef/1a1a1a?text=01" alt="Chemise Lin Écru" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+      </a>
+      <div class="mt-5">
+        <h3 class="text-sm font-normal tracking-wide text-[#1a1a1a]">Chemise Lin Écru</h3>
+        <p class="mt-1 text-sm font-light text-[#1a1a1a]/60">180 €</p>
+        <button type="button" data-add class="mt-4 w-full border border-[#1a1a1a] bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] transition-colors duration-300 hover:bg-[#1a1a1a] hover:text-white">Ajouter au panier</button>
+      </div>
+    </article>
+
+    <article class="group">
+      <a href="produit.html" class="block overflow-hidden bg-[#f4f2ef]">
+        <img src="https://placehold.co/800x1000/eae7e2/1a1a1a?text=02" alt="Pantalon Taille Haute" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+      </a>
+      <div class="mt-5">
+        <h3 class="text-sm font-normal tracking-wide text-[#1a1a1a]">Pantalon Taille Haute</h3>
+        <p class="mt-1 text-sm font-light text-[#1a1a1a]/60">240 €</p>
+        <button type="button" data-add class="mt-4 w-full border border-[#1a1a1a] bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] transition-colors duration-300 hover:bg-[#1a1a1a] hover:text-white">Ajouter au panier</button>
+      </div>
+    </article>
+
+    <article class="group sm:col-span-2 lg:col-span-1">
+      <a href="produit.html" class="block overflow-hidden bg-[#f4f2ef]">
+        <img src="https://placehold.co/800x1000/dedad3/1a1a1a?text=03" alt="Veste Structurée" class="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+      </a>
+      <div class="mt-5">
+        <h3 class="text-sm font-normal tracking-wide text-[#1a1a1a]">Veste Structurée</h3>
+        <p class="mt-1 text-sm font-light text-[#1a1a1a]/60">390 €</p>
+        <button type="button" data-add class="mt-4 w-full border border-[#1a1a1a] bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#1a1a1a] transition-colors duration-300 hover:bg-[#1a1a1a] hover:text-white">Ajouter au panier</button>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="mt-16 text-center">
+    <a href="collection.html" class="inline-flex items-center justify-center border border-[#1a1a1a]/20 px-10 py-4 text-[11px] font-medium uppercase tracking-[0.25em] text-[#1a1a1a] transition-colors duration-300 hover:border-[#1a1a1a]">Voir toute la collection</a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', () => {
+    document.querySelector('[data-cart-open]').click();
+  }));
+});
+</script>
+</body>
+</html>
