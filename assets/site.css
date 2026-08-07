@@ -16,3 +16,11 @@ html { scroll-behavior: smooth; }
 input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button { appearance: none; margin: 0; }
+
+/* Grille collection : asymétrie éditoriale.
+   Positionnel (nth-child) et non par carte, pour que le décalage
+   reste stable quand le tri réordonne les éléments. */
+@media (min-width: 1024px) {
+  [data-grid] > *:nth-child(3n + 2) { margin-top: 4rem; }
+  [data-grid] > *:nth-child(3n + 3) { margin-top: 1.5rem; }
+}

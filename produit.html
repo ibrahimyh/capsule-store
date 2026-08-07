@@ -17,26 +17,41 @@
 <div id="site-header"></div>
 
 <main class="bg-[#FAF9F7]">
-  <div class="lg:grid lg:grid-cols-2 lg:items-start">
+  <div class="mx-auto grid max-w-[1600px] grid-cols-1 items-start gap-6 px-0 lg:grid-cols-12 lg:gap-8 lg:px-14 lg:py-10">
 
-    <div class="lg:sticky lg:top-[73px]">
-      <div class="flex snap-x snap-mandatory overflow-x-auto lg:grid lg:grid-cols-1 lg:gap-1 lg:overflow-visible">
-        <img src="assets/img/p01-chemise.svg" alt="Chemise Lin Écru — face" class="aspect-[4/5] w-full shrink-0 snap-center object-cover">
-        <img src="assets/img/p02-pantalon.svg" alt="Chemise Lin Écru — dos" class="aspect-[4/5] w-full shrink-0 snap-center object-cover">
-        <img src="assets/img/p03-veste.svg" alt="Chemise Lin Écru — détail" class="aspect-[4/5] w-full shrink-0 snap-center object-cover">
+    <div class="lg:col-span-7">
+      <div class="grid grid-cols-12 gap-2 md:gap-3">
+        <figure class="group relative col-span-12 overflow-hidden bg-[#EDEAE4]">
+          <img src="assets/img/p01-chemise.svg" alt="Chemise Lin Écru portée de face" class="aspect-[4/5] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105">
+          <figcaption class="absolute bottom-5 left-5 bg-white/90 px-3 py-1.5 text-[9px] font-medium uppercase tracking-[0.18em] text-[#111] backdrop-blur">Porté taille S</figcaption>
+        </figure>
+        <figure class="group col-span-7 overflow-hidden bg-[#E4E0D8]">
+          <img src="assets/img/p02-pantalon.svg" alt="Chemise Lin Écru vue de dos" class="aspect-square w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105">
+        </figure>
+        <figure class="group col-span-5 overflow-hidden bg-[#DED9D1]">
+          <img src="assets/img/p03-veste.svg" alt="Détail du tissage et des boutons corozo" class="aspect-square w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105">
+        </figure>
       </div>
+
+      <figure class="mt-2 flex flex-col justify-center bg-[#111] p-8 md:mt-3 md:p-12">
+        <svg class="h-5 w-5 text-white/35" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        <blockquote class="mt-6 font-serif text-2xl font-light italic leading-snug text-white md:text-3xl">
+          « Le lin lavé gagne en tenue à chaque passage. Une chemise qui vieillit mieux qu'elle ne se vend. »
+        </blockquote>
+        <figcaption class="mt-6 text-[10px] font-medium uppercase tracking-[0.2em] text-white/40">Notes de l'atelier — Porto</figcaption>
+      </figure>
     </div>
 
-    <div class="px-6 pb-20 pt-8 md:px-12 lg:px-16 lg:pt-20 xl:px-24">
+    <div class="px-5 pb-20 pt-10 md:px-10 lg:col-span-5 lg:sticky lg:top-[132px] lg:px-0 lg:pl-12 lg:pt-4 xl:pl-16">
 
       <nav class="mb-8 flex gap-2 text-[11px] font-light uppercase tracking-[0.15em] text-[#111]/40">
         <a href="index.html" class="transition-colors hover:text-[#111]">Accueil</a><span>/</span>
         <a href="collection.html" class="transition-colors hover:text-[#111]">Collection</a>
       </nav>
 
-      <p class="text-[11px] font-light uppercase tracking-[0.3em] text-[#111]/40">Édition limitée</p>
-      <h1 class="font-serif mt-4 font-light leading-tight tracking-tight text-[#111] text-3xl md:text-4xl lg:text-5xl">Chemise Lin Écru</h1>
-      <p class="mt-4 text-xl font-light text-[#111]">180 €</p>
+      <div class="flex items-center gap-3"><span class="h-px w-10 bg-[#C7513A]"></span><span class="text-[10px] font-medium uppercase tracking-[0.3em] text-[#C7513A]">Édition limitée — 120 exemplaires</span></div>
+      <h1 class="mt-6 font-serif text-4xl font-light leading-[0.95] tracking-[-0.02em] text-[#111] md:text-5xl lg:text-[3.4rem]">Chemise<br><span class="italic">Lin Écru</span></h1>
+      <p class="mt-6 font-serif text-2xl font-light text-[#111]">180 €</p>
       <p class="mt-1 text-[11px] font-light text-[#111]/40">Taxes incluses. Livraison calculée au paiement.</p>
 
       <p class="mt-8 max-w-md text-sm font-light leading-relaxed text-[#111]/60">
@@ -130,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       group.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
-    document.querySelector('[data-cart-open]').click();
+    capsuleToast('Chemise Lin Écru', 'Taille ' + form.querySelector('input[name="size"]:checked').value + ' — ajouté au panier');
   });
 });
 </script>

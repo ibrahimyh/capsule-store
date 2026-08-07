@@ -86,7 +86,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', () => {
-    document.querySelector('[data-cart-open]').click();
+    capsuleToast('Chemise Lin Écru', 'Taille ' + form.querySelector('input[name="size"]:checked').value + ' — ajouté au panier');
   }));
 });
 </script>

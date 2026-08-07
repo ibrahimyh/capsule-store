@@ -62,7 +62,7 @@ const HEADER = `
 
       <a href="panier.html" class="group ml-1 flex items-center gap-2.5 rounded-full bg-[#111] py-2.5 pl-4 pr-2.5 transition-all duration-500 ease-out hover:bg-[#2b2b2b]">
         <span class="text-[10px] font-medium uppercase tracking-[0.18em] text-white">Panier</span>
-        <span data-count class="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[11px] font-medium text-[#111] transition-transform duration-500 ease-out group-hover:scale-110">2</span>
+        <span data-cart-count class="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[11px] font-medium text-[#111] transition-transform duration-500 ease-out group-hover:scale-110">2</span>
       </a>
     </div>
   </nav>
@@ -200,7 +200,7 @@ window.capsuleToast = (titre, sous) => {
   toast.querySelector('[data-toast-title]').textContent = titre;
   toast.querySelector('[data-toast-sub]').textContent = sous;
 
-  const count = document.querySelector('[data-count]');
+  const count = document.querySelector('[data-cart-count]');
   if (count) {
     count.textContent = +count.textContent + 1;
     count.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.35)' }, { transform: 'scale(1)' }], { duration: 450, easing: 'ease-out' });
